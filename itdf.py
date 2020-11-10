@@ -19,9 +19,10 @@ def idf(word, corpus):
 
 
 
-file = open("Ot_Chego_zavisit_obschpol_poved.txt")
-corpus = file.read()
-corpus= corpus.split(" ")
+corpus=[]
+with open("Ot_Chego_zavisit_obschpol_poved.txt", 'r') as myself:
+        for word in myself.read().split():
+                corpus.append (word)
 
 
 print (tf(corpus))
